@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/site.css' %}" rel="stylesheet">
+</head>
+<body>
+
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="{% url "index" %}">Home</a></li>
+  <li role="presentation"><a href="{% url "concerts" %}">J.Cole Concerts</a></li>
+  <li role="presentation"><a href="{% url "aboutme" %}">About me</a></li>
+</ul>
+
+
+
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+<script src="{% static 'js/bootstrap.js' %}" type="application/javascript"></script>
+</body>
+</html>
