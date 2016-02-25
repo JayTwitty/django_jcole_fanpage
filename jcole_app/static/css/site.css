@@ -1,0 +1,16 @@
+.center{
+    text-align: center;
+}
+
+.white_text{
+    color: white;
+    background-color: black;
+}
+
+.large{
+    font-size: 24px;
+}
+
+.medium{
+    font-size: 16px;
+}

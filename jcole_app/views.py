@@ -1,5 +1,5 @@
 from django.shortcuts import render, render_to_response
-
+from jcole_app.models import Jcole
 
 # Create your views here.
 
@@ -12,4 +12,8 @@ def aboutme_views(request):
 
 
 def concerts_views(request):
-    return render_to_response("concerts.html",{})
+    all_concerts = Jcole.objects.all()
+    return render_to_response("concerts.html",{'concerts': all_concerts})
+
+
+

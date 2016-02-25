@@ -3,16 +3,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>J.Cole Concerts and Live Shows</title>
     <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
     <link href="{% static 'css/site.css' %}" rel="stylesheet">
 </head>
-<body>
+<body class="center white_text">
+<div class="container">
 <ul class="nav nav-tabs">
   <li role="presentation"><a href="{% url "index" %}">Home</a></li>
   <li role="presentation" class="active"><a href="{% url "concerts" %}">J.Cole Concerts</a></li>
   <li role="presentation"><a href="{% url "aboutme" %}">About me</a></li>
-</ul></body>
+</ul>
+    <h1>2016 Live Shows</h1>
+<div> <img width="110" height="75" src="{% static 'parental_advisory.png' %}"/></div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Ka4BxFizU7I?autoplay=1" frameborder="0" allowfullscreen></iframe>
+<br>
+<br>
+   <table class="table table">
+  <tr class="large">
+      <td><strong>Date: </strong></td>
+      <td><strong>Event:</strong> </td>
+      <td><strong>Location: </strong></td>
+      <td><strong>Ticket Info: </strong></td>
+  </tr>
+       {% for concert in concerts %}
+  <tr>
+       <td>{{ concert.event_date }} </td>
+       <td>{{ concert.event_name }} </td>
+       <td>{{ concert.event_location }} </td>
+       <td><a target="_blank" href="{{ concert.ticket_info }}"> Click Here </a></td>
+{% endfor %}
+   </tr>
+   </table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<iframe src="http://www.hbo.com/data/content/global/videos/embed/data/1432358.html?width=640&height=360" width="640" height="360" style="overflow:hidden" scrolling="no" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" seamless="seamless" frameborder="0" type="text/html"></iframe><div><a title="Tease" href="http://www.hbo.com/video/video.html?autoplay=true&vid=1432358&filter=j-cole-forest-hills-drive-homecoming/index.html&view=null">Tease</a></div>
+<br>
+<br>
+   <a target="_blank" href="http://www.jcolemusic.com">
+    <img src="{% static 'index_background_image.jpg' %}"/>
+   </a>
+</div>
 <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
 <script src="{% static 'js/bootstrap.js' %}" type="application/javascript"></script>
+</body>
 </html>

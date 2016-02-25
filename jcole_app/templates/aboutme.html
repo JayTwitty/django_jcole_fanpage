@@ -3,16 +3,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>About me</title>
     <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
     <link href="{% static 'css/site.css' %}" rel="stylesheet">
 </head>
-<body>
+<body class="white_text center container">
 <ul class="nav nav-tabs">
   <li role="presentation"><a href="{% url "index" %}">Home</a></li>
   <li role="presentation"><a href="{% url "concerts" %}">J.Cole Concerts</a></li>
   <li role="presentation" class="active"><a href="{% url "aboutme" %}">About me</a></li>
 </ul>
+<br>
+<br>
+<h1>J. Twitty aka "Mr. Dreamville"</h1>
+<br>
+<br>
+ <a target="_blank" href="http://www.facebook.com/jamariot">
+    <img width="500" height="500" src="{% static 'jtwitty.jpg' %}"/>
+ </a>
+<p class="large">I first started listing to J. Cole when I was in Grad School in 2010. His message was of a college educated
+    young black male from a low-income single mother home who against all odds left his hometown to chase his <em><strong>DREAM</strong></em>.
+    With his immense lyrical talent and our shared mindset and goals I was immediately drawn to his music
+    and became a fan. </p>
+<br>
+<p><strong>Use the link below to Connect...</strong></p>
+
 <!-- Trigger the modal with a button -->
 <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Contact Me</button>
 
@@ -36,6 +51,9 @@
 
   </div>
 </div>
+<br>
+<br>
+<br>
 <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
 <script src="{% static 'js/bootstrap.js' %}" type="application/javascript"></script>
 </body>
